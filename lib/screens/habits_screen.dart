@@ -535,7 +535,7 @@ class _AddHabitDialogState extends State<AddHabitDialog> {
                     height: 32,
                     margin: const EdgeInsets.only(right: 8),
                     decoration: BoxDecoration(
-                      color: Color(int.parse(color.replaceFirst('#', '0xFF'), radix: 16)),
+                      color: Color(int.parse('FF${color.replaceFirst('#', '')}', radix: 16)),
                       shape: BoxShape.circle,
                       border: isSelected
                           ? Border.all(
