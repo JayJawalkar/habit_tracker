@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habit_tracker/services/notification_service.dart';
 import 'dart:math' as math;
 import '../services/supabase_service.dart';
 import '../services/preferences_service.dart';
@@ -226,6 +227,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   _buildMacrosGrid(),
                   const SizedBox(height: 32),
 
+                  ElevatedButton(
+                    onPressed: () =>
+                        NotificationService().showTestNotification(),
+                    child: const Text('Test Notification'),
+                  ),
                   // Streak Card
                   _buildStreakCard(),
                   const SizedBox(height: 32),
